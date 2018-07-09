@@ -1,0 +1,22 @@
+html(lang='tr')
+  head
+    title Fotoğraf Bilgisi Öğrenme , Online Exif Bilgisi öğren
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+  body
+    .jumbotron.text-center
+      h1 Fotoğrafların Orjinal olup olmadığını Sorgulayın
+      p  Fotoğrafınızın  bilgisini öğrenin
+    .container
+      .row
+        .col-sm-12
+          form(action="/upload" , method="post")
+            input.form-control-file.border(type='file', name="file", enctype='multipart/form-data')
+            button Yükle
+
+
+          block content
